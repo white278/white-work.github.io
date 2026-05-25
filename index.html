@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人作品集 | 建模 & 地编 & 动画</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body { background: #f8f8f8; color: #333; line-height: 1.6; }
+        .header { background: #222; color: white; text-align: center; padding: 40px 20px; }
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { opacity: 0.8; font-size: 16px; }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .title {
+            font-size: 22px;
+            margin: 50px 0 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* 强制 3 列网格，永远整齐 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* 所有卡片大小 100% 相同 */
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            height: 380px !important;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 图片 + 视频 显示区域 强制一样大 */
+        .media {
+            width: 100%;
+            height: 220px !important;
+            overflow: hidden;
+            background: #000;
+        }
+
+        /* 强制图片视频统一尺寸、居中、不变形 */
+        .media img,
+        .media video {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            display: block !important;
+        }
+
+        .info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .tags {
+            margin-top: 10px;
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .tags span {
+            background: #f0f0f0;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>白伊恒</h1>
+    <p>次世代建模 | 游戏地编 | 动画制作| 关卡设计</p>
+</div>
+
+<div class="container">
+
+    <div class="title">个人简介</div>
+    <p style="margin-bottom:30px;">擅长PBR次世代全流程建模，熟练使用Blender、UE5、Substance Painter等软件。</p>
+
+    <!-- ====================================== -->
+    <!-- 👇 静态作品展示 -->
+    <!-- ====================================== -->
+    <div class="title">静态作品展示</div>
+    <div class="grid">
+
+        <!-- 图片卡片 1 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/斩马刀.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>斩马刀</h3>
+                    <p>Blender制作高低模、UV拆分、PBR材质全流程</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>PBR建模</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 2 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/长枪.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>长枪</h3>
+                    <p>Blender制作高低模、UV拆分、PBR材质全流程</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>PBR建模</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 3 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/折叠小刀.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>折叠小刀</h3>
+                    <p>硬表面建模，贴图制作，UE5渲染</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>UE5</span>
+                </div>
+            </div>
+        </div>
+       <!-- 图片卡片 4 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/瞄准镜.jpg" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>全息光学瞄准镜</h3>
+                    <p>硬表面建模，贴图制作，UE5渲染</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>UE5</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 5 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/移动炮台.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>移动炮台</h3>
+                    <p>Blender制作高低模、UV拆分、PBR材质全流程</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>PBR建模</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 6 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/匕首.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>匕首</h3>
+                    <p>Blender制作高低模、UV拆分、PBR材质全流程</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>PBR建模</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 7 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/欧式长枪.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>欧式·长枪</h3>
+                    <p>Blender制作高低模、UV拆分、PBR材质全流程</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>PBR建模</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 8 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/古代匕首.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>古代匕首</h3>
+                    <p>Blender制作高低模、UV拆分、PBR材质全流程</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>PBR建模</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 9 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/塑料玩具剑.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>塑料玩具剑</h3>
+                    <p>Blender制作高低模、UV拆分、PBR材质全流程</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>PBR建模</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 10 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/消防栓.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>消防栓</h3>
+                    <p>Blender制作高低模、UV拆分、PBR材质全流程</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>PBR建模</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 11 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/高达.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>高达</h3>
+                    <p>Blender制作高低模、UV拆分、PBR材质全流程</p>
+                </div>
+                <div class="tags">
+                    <span>Blender</span>
+                    <span>PBR建模</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 图片卡片 12 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/废弃医院.jpg" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>废弃医院</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>UE5</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 13 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/废弃医院1.jpg" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>废弃医院1</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>UE5</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 14 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/废弃医院2.jpg" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>废弃医院2</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>UE5</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 15 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/pcg小村落.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>pcg小村落</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>UE5</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 图片卡片 16 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/水下城.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>水下城</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 17 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/末日火车.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>末日火车</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>UE5</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 18 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/三渲二简约学校.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>三渲二简约学校</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 19 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/三渲二小猫.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>三渲二小猫</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 20 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/方块领域.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>方块领域</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 21 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/太空方块.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>太空方块</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 22 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/太空实验室.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>太空实验室</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 23 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/小岛.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>小岛</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 24 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/展厅.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>展厅</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 25 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/展厅2.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>展厅2</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 26 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/展厅3.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>展厅3</h3>
+                    <p>设计地图，确定镜头，搭建场景</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>场景搭建</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 27 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/怪物正面.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>怪物正面</h3>
+                    <p>设计怪物形态，雕刻出形体，绑骨骼做动作</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>角色建模与雕刻</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 28 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/怪物侧面.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>怪物侧面</h3>
+                    <p>设计怪物形态，雕刻出形体，绑骨骼做动作</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>角色建模与雕刻</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 29 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/怪物背面.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>怪物背面</h3>
+                    <p>设计怪物形态，雕刻出形体，绑骨骼做动作</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>角色建模与雕刻</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 30 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/甜甜圈.jpg" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>甜甜圈</h3>
+                    <p>对houdini特效的尝试与应用</p>
+                </div>
+                <div class="tags">
+                    <span>houdini</span>
+                    <span>特效</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 图片卡片 31 -->
+        <div class="card">
+            <div class="media">
+                <img src="images/烟雾传送门.png" alt="作品">
+            </div>
+            <div class="info">
+                <div>
+                    <h3>烟雾传送门</h3>
+                    <p>对houdini特效的尝试与应用</p>
+                </div>
+                <div class="tags">
+                    <span>houdini</span>
+                    <span>特效</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!-- ====================================== -->
+    <!-- 👇 动态视频作品区（和图片大小完全一致） -->
+    <!-- ====================================== -->
+    <div class="title">动态视频作品</div>
+    <div class="grid">
+
+        <!-- 视频卡片 1 -->
+        <div class="card">
+            <div class="media">
+                <video controls muted>
+                    <source src="videos/太空空间站.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>太空空间站</h3>
+                    <p>blender镜头动画，展示场景空间与细节</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>动画设计</span>
+                </div>
+            </div>
+        </div>
+      <!-- 视频卡片 2 -->
+        <div class="card">
+            <div class="media">
+                <video controls muted>
+                    <source src="videos/谈判.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>谈判</h3>
+                    <p>UE5镜头动画，展示场景空间与细节</p>
+                </div>
+                <div class="tags">
+                    <span>UE5</span>
+                    <span>动画与场景设计</span>
+                </div>
+            </div>
+        </div>
+
+      <!-- 视频卡片 3 -->
+        <div class="card">
+            <div class="media">
+                <video controls muted>
+                    <source src="videos/仿原神二游.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>仿原神二游</h3>
+                    <p>UE5制作，包含人物八方行走与蹲下跳跃动作，角色连贯攻击动画与怪物的血条和攻击模组动画的制作，以及角色击杀怪物后怪物的物品掉落与角色死亡逻辑</p>
+                </div>
+                <div class="tags">
+                    <span>UE5</span>
+                    <span>游戏开发与制作</span>
+                </div>
+            </div>
+        </div>
+
+      <!-- 视频卡片 4 -->
+        <div class="card">
+            <div class="media">
+                <video controls muted>
+                    <source src="videos/超人飞行.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>超人飞行</h3>
+                    <p>blender镜头动画，展示人物动作与特效</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>特效</span>
+                </div>
+            </div>
+        </div>
+
+      <!-- 视频卡片 5 -->
+        <div class="card">
+            <div class="media">
+                <video controls muted>
+                    <source src="videos/第一人称fps换弹.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>第一人称fps运动</h3>
+                    <p>blender镜头动画，展示人物换弹动作（因工程太久导致材质丢失与动画混乱）</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>人物动画制作</span>
+                </div>
+            </div>
+        </div>
+
+      <!-- 视频卡片 6 -->
+        <div class="card">
+            <div class="media">
+                <video controls muted>
+                    <source src="videos/动漫风运动.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>动漫风运动</h3>
+                    <p>blender特效制作，展示二次元运动形体拉伸效果</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>特效</span>
+                </div>
+            </div>
+        </div>
+
+      <!-- 视频卡片 7 -->
+        <div class="card">
+            <div class="media">
+                <video controls muted>
+                    <source src="videos/科幻生长效果.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>科幻生长效果</h3>
+                    <p>blender特效制作，展示肢体破损后科幻恢复效果</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>特效</span>
+                </div>
+            </div>
+        </div>
+
+      <!-- 视频卡片 8 -->
+        <div class="card">
+            <div class="media">
+                <video controls muted>
+                    <source src="videos/物体消散.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>物体消散</h3>
+                    <p>blender特效制作，展示物体消散效果</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>特效</span>
+                </div>
+            </div>
+        </div>
+
+      <!-- 视频卡片 9 -->
+        <div class="card">
+            <div class="media">
+                <video controls muted>
+                    <source src="videos/科幻小机器人.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>科幻小机器人</h3>
+                    <p>blender机械动画制作，制作机器人前进与拐弯检视动作</p>
+                </div>
+                <div class="tags">
+                    <span>blender</span>
+                    <span>动画制作</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>联系邮箱：2704874239@qq.com | 电话：13525429115</p>
+</div>
+
+</body>
+</html>
